@@ -1,1 +1,1 @@
-web: babel-node start.js
+web: node start.js
