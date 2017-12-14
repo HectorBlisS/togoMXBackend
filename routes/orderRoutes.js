@@ -1,9 +1,10 @@
 const express = require('express');
-const firebase = require("../firebase");
-const notifyStores = require('../firebase');
+const firebaseMethods = require("../firebase");
+//const notifyStores = require('../firebase');
 const mongoose = require("mongoose");
 const Store = mongoose.model("Store");
 const orderRouter = express.Router();
+const firebase = firebaseMethods.firebaseInit();
 
 function changeToRadians(km=5){
     const miles = km * .621371;
@@ -37,7 +38,7 @@ orderRouter.route("/deliver")
             return;
         }
         // y aquí notificamos a las tiendas
-        notifyStores(query, order);
+        firebaseMethods.notifyStores(query, order);
         res.json(query);
     });
 

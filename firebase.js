@@ -10,6 +10,10 @@ const config = {
 };
 firebase.initializeApp(config);
 
+exports.firebaseInit = function(){
+    return firebase;
+}
+
 
 exports.notifyStores = function(stores, order){
     let updates = {};
