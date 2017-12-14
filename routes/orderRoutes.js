@@ -32,7 +32,7 @@ orderRouter.route("/deliver")
         const repartidor = body.position.coordinates;
         const order = body.order;
         //aquí seteamos al repartidor con su orden actual
-        if(!repartidor) return res.status(500).send("No sabemos donde estas");
+        if(!repartidor || !order) return res.status(500).send("No sabemos donde estas");
         const distance = changeToRadians(req.body.distance);
         const query = await Store.find({location: {$geoWithin: { $centerSphere: [ repartidor, distance ]}}});
         if(query.length < 1) {
