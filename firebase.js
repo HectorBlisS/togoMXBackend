@@ -10,10 +10,9 @@ const config = {
 };
 firebase.initializeApp(config);
 
-exports.firebaseInit = function(){
+exports.firebaseInit = ()=>{
     return firebase;
 }
-
 
 exports.notifyStores = function(stores, order){
     let updates = {};
@@ -30,4 +29,4 @@ exports.notifyStores = function(stores, order){
     firebase.database().ref().update(updates);
 };
 
-module.exports = firebase;
+//module.exports = firebase;
