@@ -1,4 +1,4 @@
-import express from 'express';
+const express = require('express');
 
 
 
@@ -14,4 +14,4 @@ deliveryManRouter.route("/position")
     });
 
 
-export default deliveryManRouter;
+module.exports = deliveryManRouter;

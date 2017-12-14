@@ -1,9 +1,9 @@
-import express from 'express';
-import storeRouter from "./routes/storeRoutes";
-import deliveryManRouter from './routes/deliveryManRoutes';
-import orderRoutes from './routes/orderRoutes';
-import cors from 'cors';
-import bodyParser from 'body-parser'
+const express  = require('express');
+const storeRouter = require("./routes/storeRoutes");
+const deliveryManRouter = require('./routes/deliveryManRoutes');
+const orderRoutes = require('./routes/orderRoutes');
+const cors = require('cors');
+const bodyParser = require('body-parser');
 
 const app = express();
 app.use(cors());

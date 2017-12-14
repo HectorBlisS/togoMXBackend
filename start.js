@@ -1,5 +1,5 @@
 //variables de entorno
-import mongoose from "mongoose";
+const mongoose = require("mongoose");
 const PORT = 8000;
 //import app from './app';
 

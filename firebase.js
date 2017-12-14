@@ -1,4 +1,4 @@
-import * as firebase from 'firebase';
+const firebase = require('firebase');
 
 const config = {
     apiKey: "AIzaSyBcaQr-uMH7LQcFETQLiXk5LQ1WuG9nrwY",
@@ -9,9 +9,9 @@ const config = {
     messagingSenderId: "87733822528"
 };
 firebase.initializeApp(config);
-export default firebase;
 
-export function notifyStores(stores, order){
+
+exports.notifyStores = function(stores, order){
     let updates = {};
     for (let s of stores){
         const key = firebase.database().ref("notifications").push().key;
@@ -24,4 +24,6 @@ export function notifyStores(stores, order){
         };
     }
     firebase.database().ref().update(updates);
-}
+};
+
+module.exports = firebase;

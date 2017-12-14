@@ -1,6 +1,7 @@
-import express from 'express';
-import firebase, {notifyStores} from '../firebase';
-import mongoose from "mongoose";
+const express = require('express');
+const firebase = require("../firebase");
+const notifyStores = require('../firebase');
+const mongoose = require("mongoose");
 const Store = mongoose.model("Store");
 const orderRouter = express.Router();
 
@@ -40,4 +41,4 @@ orderRouter.route("/deliver")
         res.json(query);
     });
 
-export default orderRouter;
+module.exports = orderRouter;

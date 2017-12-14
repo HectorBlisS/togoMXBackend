@@ -1,5 +1,5 @@
-import express from 'express';
-import mongoose from 'mongoose';
+const express = require('express');
+const mongoose = require('mongoose');
 const Store = mongoose.model("Store");
 
 const storeRouter = express.Router();
@@ -49,7 +49,7 @@ storeRouter.route("/get-nearest-stores")
 
 
 
-export default storeRouter;
+module.exports = storeRouter;
 
 
 //{location: {$geoWithin: { $centerSphere: [ [ -98.79593212293216, 20.116913622591184 ], 0.0002606488822898683 ]}}}
