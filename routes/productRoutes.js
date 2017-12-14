@@ -8,7 +8,8 @@ const productRouter = express.Router();
 productRouter.route('/')
     .get(async (req, res)=>{
         try{
-            res.send('los productos')
+            const products = wait Product.find();
+            res.json(products);
         }catch(e){
             console.log(e)
         }
