@@ -24,4 +24,4 @@ productRouter.route('/')
         }
     });
 
-module.exports = productR
+module.exports = productRouter;

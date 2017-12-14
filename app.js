@@ -4,6 +4,7 @@ const deliveryManRouter = require('./routes/deliveryManRoutes');
 const orderRoutes = require('./routes/orderRoutes');
 const cors = require('cors');
 const bodyParser = require('body-parser');
+const productRoutes = require('./routes/productRoutes');
 
 const app = express();
 app.use(cors());
