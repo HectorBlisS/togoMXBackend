@@ -18,6 +18,7 @@ app.get("/", (req, res)=>{
 app.use("/stores", storeRouter);
 app.use('/deliver', deliveryManRouter);
 app.use('/orders', orderRoutes);
+app.use('/products', productRoutes);
 //export default app;
 module.exports = app;
 
