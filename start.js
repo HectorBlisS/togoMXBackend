@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const PORT = 8000;
 //import app from './app';
 
-require('dotenv').config({ path: 'variables.env' });
+//require('dotenv').config({ path: 'variables.env' });
 mongoose.connect(process.env.DATABASE, {useMongoClient:true});
 mongoose.Promise = global.Promise;
 mongoose.connection.on('error', (err) => {
