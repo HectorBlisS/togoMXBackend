@@ -16,7 +16,7 @@ require("./models/Store");
 //app
 const app = require("./app");
 
-
-app.listen(PORT, ()=>{
-    console.log("corriendo en el 8000");
+app.set('port', process.env.PORT || PORT);
+app.listen(app.get('port'), ()=>{
+    console.log("corriendo en el ", app.get('port'));
 });
