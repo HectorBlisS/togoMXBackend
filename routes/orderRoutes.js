@@ -8,7 +8,7 @@ const firebase = firebaseMethods.firebaseInit();
 
 
 
-function changeToRadians(km=5){
+function changeToRadians(km=200){
     const miles = km * .621371;
     //console.log(miles / 3963.2);
     return miles / 3963.2;
